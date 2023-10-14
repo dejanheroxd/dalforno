@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navigation() {
   const [navActive, setNavActive] = useState(false);
-  console.log(navActive);
 
   function toggleNavActive() {
     setNavActive((prev) => !prev);
@@ -25,29 +24,57 @@ export default function Navigation() {
     },
   };
 
+  const btnVars1 = {
+    animate: {
+      rotate: navActive ? 45 : 0,
+      y: navActive ? 4 : 0,
+      transition: { duration: 0.1 },
+    },
+    exit: { rotate: 0 },
+  };
+
+  const btnVars2 = {
+    animate: {
+      rotate: navActive ? -45 : 0,
+      y: navActive ? -2 : 0,
+      transition: { duration: 0.1 },
+    },
+    exit: { rotate: 0 },
+  };
+
   return (
-    <header className="bg-gray-400 relative h-14 flex sm:justify-center sm:px-4 list-none">
+    <header className="relative h-14 flex sm:justify-center sm:px-4 list-none">
       <li>
-        <a href="/" className="absolute left-4 top-[14px]">
-          Pizza
+        <a
+          href="/"
+          className="absolute left-4 font-semibold text-lg top-[14px]"
+        >
+          Dalforno
         </a>
       </li>
       <button
         onClick={() => toggleNavActive()}
-        className="absolute right-3 top-0 z-50 sm:hidden"
+        className="absolute right-3 top-0 z-50 "
       >
-        <div className="absolute right-[4px] h-10 w-10 items-center flex flex-col justify-center top-2">
-          <span
-            className={`bg-black h-[2px] duration-300  w-7 block mb-1 ${
-              navActive ? "rotate-45 translate-y-1" : ""
-            }`}
-          ></span>
-
-          <span
-            className={`bg-black h-[2px] duration-300  w-7 block ${
-              navActive ? "-rotate-45 translate-y-[-2px]" : ""
-            }`}
-          ></span>
+        <div className="absolute right-[4px] h-10 w-10 items-center z-50 flex flex-col justify-center sm:hidden top-2">
+          <AnimatePresence>
+            <motion.span
+              variants={btnVars1}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="bg-black h-[2px] duration-300  w-7 block mb-1"
+            ></motion.span>
+          </AnimatePresence>
+          <AnimatePresence>
+            <motion.span
+              variants={btnVars2}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="bg-black h-[2px] duration-300  w-7 "
+            ></motion.span>
+          </AnimatePresence>
         </div>
       </button>
       <AnimatePresence>
@@ -80,4 +107,3 @@ export default function Navigation() {
     </header>
   );
 }
-// heyoo

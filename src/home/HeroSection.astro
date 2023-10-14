@@ -1,0 +1,32 @@
+---
+import pizzaHeader from "../assets/pizza-heading-min.jpg";
+import { Image } from "astro:assets";
+---
+
+<main>
+  <div class="flex flex-col items-center h-[490px]">
+    <div class="overflow-hidden h-64">
+      <Image
+        src={pizzaHeader}
+        width={400}
+        quality={"high"}
+        alt="pizza image h-full w-full"
+      />
+    </div>
+    <div class="w-72 h-full flex flex-col justify-center items-center">
+      <div
+        class="relative bg-[url('/src/assets/olives.webp')] bg-no-repeat bg-center"
+      >
+        <h1 class="pb-[80px] z-20 pt-4 font-bold text-5xl text-italia">
+          DALFORNO
+        </h1>
+      </div>
+      <h2 class="pb-12 text-stone-800 font-serif">
+        There is a Place like Home
+      </h2>
+      <button class="border border-italia text-italia px-4 text-lg"
+        >See Menu</button
+      >
+    </div>
+  </div>
+</main>

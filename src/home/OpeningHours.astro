@@ -1,0 +1,33 @@
+---
+import tortellini from "../assets/tortellini.jpg";
+import somePizza from "../assets/somePizza.jpg";
+import rosemary from "../assets/rosemary.jpg";
+import { Image } from "astro:assets";
+---
+
+<main>
+  <Image
+    src={tortellini}
+    width={360}
+    quality={60}
+    format="avif"
+    alt="picture of toretllini"
+  />
+  <Image
+    src={somePizza}
+    width={360}
+    quality={60}
+    format="avif"
+    alt="picture of pizza"
+  />
+  <div>
+    <p>opening hours</p>
+  </div>
+  <Image
+    src={rosemary}
+    width={360}
+    quality={50}
+    format="avif"
+    alt="picture of dish with wine and pizza"
+  />
+</main>

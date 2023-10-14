@@ -5,7 +5,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html transition:animate="none" lang="en">
   <MainHead {title} />
   <body>
     <Navigation client:load transition:persist />

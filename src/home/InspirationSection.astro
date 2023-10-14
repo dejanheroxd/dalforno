@@ -1,0 +1,36 @@
+---
+import grandma from "../assets/grandma-min.jpg";
+import { Image } from "astro:assets";
+---
+
+<main>
+  <div class="h-[440px] bg-italia mt-4 flex justify-center">
+    <Image
+      width={280}
+      height={240}
+      src={grandma}
+      quality={"high"}
+      alt="old woman making pizza"
+      class="py-8"
+    />
+  </div>
+  <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col w-60 text-center">
+      <p class="text-italia font-serif py-10 text-lg">
+        Authentic Italian Flavors, Generations in the Making
+      </p>
+      <p class="text-stone-800">
+        Welcome to our Italian pizzeria, where we bring the flavors of Italy to
+        your plate. Our passion for authentic Italian taste spans generations.
+        Each dish is a labor of love, crafted with the finest ingredients. Join
+        us on our culinary journey. Buon appetito!
+      </p>
+      <div>
+        <button
+          class="px-12 py-3 border border-gray-700 text-sm font-semibold text-gray-700 my-8"
+          >Read More</button
+        >
+      </div>
+    </div>
+  </div>
+</main>
