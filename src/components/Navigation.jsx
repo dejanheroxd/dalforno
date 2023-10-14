@@ -53,6 +53,7 @@ export default function Navigation() {
         </a>
       </li>
       <button
+        aria-label="navigation button"
         onClick={() => toggleNavActive()}
         className="absolute right-3 top-0 z-50 "
       >
