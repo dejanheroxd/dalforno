@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Image } from "astro:assets";
 
 export default function Navigation() {
   const [navActive, setNavActive] = useState(false);
@@ -43,21 +44,19 @@ export default function Navigation() {
   };
 
   return (
-    <header className="relative h-14 flex sm:justify-center sm:px-4 list-none">
+    <header className="relative h-16 flex sm:justify-center sm:px-4 list-none">
       <li>
         <a
           href="/"
           className="absolute left-4 font-semibold text-lg top-[14px]"
-        >
-          Dalforno
-        </a>
+        ></a>
       </li>
       <button
         aria-label="navigation button"
         onClick={() => toggleNavActive()}
         className="absolute right-3 top-0 z-50 "
       >
-        <div className="absolute right-[4px] h-10 w-10 items-center z-50 flex flex-col justify-center sm:hidden top-2">
+        <div className="absolute right-[4px] h-10 w-10 items-center z-50 flex flex-col justify-center sm:hidden top-3">
           <AnimatePresence>
             <motion.span
               variants={btnVars1}

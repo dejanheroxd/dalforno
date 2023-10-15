@@ -1,6 +1,7 @@
 ---
 import pizzaHeader from "../assets/pizza-heading.jpg";
 import { Image } from "astro:assets";
+import logo from "../assets/logoF.webp";
 ---
 
 <main>
@@ -8,7 +9,7 @@ import { Image } from "astro:assets";
     <div class="overflow-hidden h-64">
       <Image
         src={pizzaHeader}
-        height={600}
+        height={570}
         format="avif"
         quality={"high"}
         alt="pizza image h-full w-full"
@@ -30,5 +31,13 @@ import { Image } from "astro:assets";
         class="border border-italia text-italia px-4 text-lg">See Menu</button
       >
     </div>
+    <Image
+      height={140}
+      format="avif"
+      quality={100}
+      src={logo}
+      alt="logo"
+      class="absolute top-[-44px] left-[-80px]"
+    />
   </div>
 </main>
