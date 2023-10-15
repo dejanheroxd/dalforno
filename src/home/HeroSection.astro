@@ -1,5 +1,5 @@
 ---
-import pizzaHeader from "../assets/pizza-heading-min.jpg";
+import pizzaHeader from "../assets/pizza-heading.jpg";
 import { Image } from "astro:assets";
 ---
 
@@ -8,7 +8,8 @@ import { Image } from "astro:assets";
     <div class="overflow-hidden h-64">
       <Image
         src={pizzaHeader}
-        width={400}
+        height={600}
+        format="avif"
         quality={"high"}
         alt="pizza image h-full w-full"
       />
