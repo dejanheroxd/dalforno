@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import aboutBg from "../assets/about-bg.webp";
+---
+
+<div class="flex justify-center font-serif pt-6">
+  <div class="w-[300px] flex flex-col items-center text-center">
+    <div>
+      <Image src={aboutBg} alt="Picture of italia" />
+    </div>
+    <div>
+      <p class="text-2xl text-italia">Our Story</p>
+      <p class="text-orange-950 text-lg">Pasta Runs in Our Family</p>
+      <div class="flex justify-center py-9">
+        <span class="h-[1px] w-9 block bg-italia"></span>
+      </div>
+      <p class="text-orange-950 pb-8">
+        At the heart of our restaurant, you'll find a family united by our love
+        for pasta. This shared passion has been a part of our heritage for many
+        generations. Our commitment to offering the very best pasta dishes is a
+        tradition that has stood the test of time. Each plate we craft is a true
+        labor of love, prepared with the highest quality ingredients. We invite
+        you to explore our diverse menu, indulge in our culinary creations, and
+        join us on this incredible pasta journey. Enjoy your meal!
+      </p>
+      <p class="text-orange-950">
+        In our establishment, we take great pride in preparing classic Italian
+        flavors that have become timeless favorites. Our journey began with a
+        profound dedication to delivering authentic tastes and creating
+        memorable dining moments. What sets us apart is our unwavering
+        commitment to culinary excellence and our genuine concern for our
+        guests. We encourage you to delve into our story and experience the
+        distinct qualities that make us unique. Join us for an exceptional
+        culinary expedition, and relish the essence of Italy on your plate.
+        Let's create cherished memories together!
+      </p>
+    </div>
+  </div>
+</div>

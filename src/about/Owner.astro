@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import chef from "../assets/chef.jpg";
+---
+
+<div
+  class="pt-9 flex flex-col justify-center items-center text-center font-serif"
+>
+  <div class="mb-28">
+    <p class="text-italia text-2xl">Owner & Executive Chef</p>
+    <p class="text-xl">Alberto Paganini</p>
+  </div>
+  <div class="bg-italia relative w-full h-[390px] flex justify-center">
+    <div class="w-64 absolute top-[-65px]">
+      <Image src={chef} width={434} format="avif" alt="Image of the Owner" />
+    </div>
+  </div>
+  <p class="pt-8 text-xl italic pb-10">"Al Dente makes you smile"</p>
+  <p class="w-80">
+    I'm a paragraph. Click here to add your own text and edit me. It’s easy.
+    Just click “Edit Text” or double click me to add your own content and make
+    changes to the font. I’m a great place for you to tell a story and let your
+    users know a little more about you.
+  </p>
+  <div class="flex justify-center pt-9 pb-5">
+    <span class="h-[1px] w-9 block bg-italia"></span>
+  </div>
+</div>
