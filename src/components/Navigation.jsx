@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navigation() {
@@ -24,6 +24,21 @@ export default function Navigation() {
     },
   };
 
+  const navItem = {
+    initial: {
+      x: "100vw",
+      transition: { duration: 0.4, ease: [0.37, 0, 0.63, 1] },
+    },
+    animate: {
+      x: 0,
+      transition: { duration: 0.6, ease: [0, 0.55, 0.45, 1] },
+    },
+    exit: {
+      x: 0,
+      transition: { duration: 2.4 },
+    },
+  };
+
   const btnVars1 = {
     animate: {
       rotate: navActive ? 45 : 0,
@@ -42,8 +57,20 @@ export default function Navigation() {
     exit: { rotate: 0 },
   };
 
+  useEffect(() => {
+    if (navActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+
+    return () => {
+      document.body.classList.overflow = "visible";
+    };
+  }, [navActive]);
+
   return (
-    <header className="relative h-16 flex sm:justify-center sm:px-4 list-none">
+    <header className="sticky bg-white top-0 left-0 z-50 h-16 flex sm:justify-center sm:px-4 list-none">
       <li>
         <a
           href="/"
@@ -53,9 +80,9 @@ export default function Navigation() {
       <button
         aria-label="navigation button"
         onClick={() => toggleNavActive()}
-        className="absolute right-3 top-0 z-50 "
+        className="absolute right-3 top-[11px] z-50 "
       >
-        <div className="absolute right-[4px] h-10 w-10 items-center z-50 flex flex-col justify-center sm:hidden top-3">
+        <div className="sticky right-[4px] h-10 w-10 items-center z-50 flex flex-col justify-center sm:hidden top-3">
           <AnimatePresence>
             <motion.span
               variants={btnVars1}
@@ -83,20 +110,52 @@ export default function Navigation() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="h-screen z-40 origin-right w-screen flex flex-col justify-center items-center gap-y-8 text-3xl sm:flex bg-white border sm:items-center sm:gap-x-20 border-red-500"
+            className="h-screen fixed top-0 z-40 origin-right w-screen flex flex-col justify-center items-center gap-y-8 text-3xl sm:flex bg-white  sm:items-center sm:gap-x-20"
           >
-            <li onClick={() => toggleNavActive()}>
-              <a href="/">Home</a>
-            </li>
-            <li onClick={() => toggleNavActive()}>
-              <a href="/about/">About</a>
-            </li>
-            <li onClick={() => toggleNavActive()}>
-              <a href="/menu/">Menu</a>
-            </li>
-            <li onClick={() => toggleNavActive()}>
-              <a href="/contact/">Contact</a>
-            </li>
+            <div className="overflow-hidden">
+              <motion.li
+                variants={navItem}
+                initial="initial"
+                animate="animate"
+                exit="initial"
+                onClick={() => toggleNavActive()}
+              >
+                <a href="/">Home</a>
+              </motion.li>
+            </div>
+            <div className="overflow-hidden">
+              <motion.li
+                variants={navItem}
+                initial="initial"
+                animate="animate"
+                exit="initial"
+                onClick={() => toggleNavActive()}
+              >
+                <a href="/about/">About</a>
+              </motion.li>
+            </div>
+            <div className="overflow-hidden">
+              <motion.li
+                variants={navItem}
+                initial="initial"
+                animate="animate"
+                exit="initial"
+                onClick={() => toggleNavActive()}
+              >
+                <a href="/menu/">Menu</a>
+              </motion.li>
+            </div>
+            <div className="overflow-hidden">
+              <motion.li
+                variants={navItem}
+                initial="initial"
+                animate="animate"
+                exit="initial"
+                onClick={() => toggleNavActive()}
+              >
+                <a href="/contact/">Contact</a>
+              </motion.li>
+            </div>
           </motion.ul>
         )}
       </AnimatePresence>
