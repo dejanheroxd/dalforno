@@ -2,4 +2,37 @@
 
 ---
 
-<div>Form</div>
+<form
+  class="flex flex-col items-center pt-12"
+  action="https://formspree.io/f/xvojzoly"
+  method="POST"
+>
+  <div class="flex flex-col items-center gap-y-3 w-72">
+    <label class="border-b border-gray-600 w-full">
+      <input
+        class="pl-6 text-gray-700 focus:outline-none pb-2"
+        type="email"
+        name="email"
+        placeholder="Email"
+      />
+    </label>
+    <label class="border-b border-gray-600 w-full">
+      <input
+        class="pl-6 text-gray-700 focus:outline-none pb-2"
+        type="text"
+        name="name"
+        placeholder="Name"
+      />
+    </label>
+    <label class="border-b border-gray-600 w-full">
+      <textarea
+        class="pl-6 text-gray-700 focus:outline-none pb-2"
+        name="message"
+        placeholder="Type you message here..."></textarea>
+    </label>
+    <!-- your other form fields go here -->
+    <button class="border border-gray-700 w-full py-2" type="submit"
+      >Submit</button
+    >
+  </div>
+</form>
