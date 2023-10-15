@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Image } from "astro:assets";
 
 export default function Navigation() {
   const [navActive, setNavActive] = useState(false);
