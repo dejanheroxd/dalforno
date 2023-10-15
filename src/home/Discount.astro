@@ -1,0 +1,26 @@
+---
+import specialPizza from "../assets/special-pizza.jpg";
+import { Image } from "astro:assets";
+---
+
+<main class="flex h-[480px] bg-italia mt-20">
+  <div class="flex flex-col items-center">
+    <p class="pb-10 pt-10 text-white font-bold text-2xl font-serif">
+      Special Offer
+    </p>
+    <div>
+      <Image
+        src={specialPizza}
+        width={700}
+        quality={48}
+        format="avif"
+        alt="special offer pizza"
+      />
+    </div>
+    <p class="text-white font-bold font-serif pt-6 pb-2">
+      Mediterranean Magic Pizza
+    </p>
+    <p class="text-white font-bold font-serif text-2xl pb-3">Only 11.99</p>
+    <button class="px-3 border border-white text-white">See All</button>
+  </div>
+</main>
