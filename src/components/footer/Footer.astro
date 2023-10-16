@@ -8,7 +8,7 @@ import dalfornoImg from "../../assets/dalfornoMapo.png";
 <footer>
   <ContactUs />
   <Form />
-  <div>
+  <div class="relative">
     <Image
       width={2000}
       format="avif"
@@ -16,6 +16,16 @@ import dalfornoImg from "../../assets/dalfornoMapo.png";
       src={dalfornoImg}
       alt="map of dalforno"
     />
+    <button
+      class="absolute top-6 right-6 bg-white h-10 w-40 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+    >
+      <a
+        class="text-blue-600"
+        target="_blank"
+        href="https://www.google.com/maps/place/Dal+Forno+Pizzeria-Restaurant/@38.9564618,20.7544427,17z/data=!4m6!3m5!1s0x135c38fc8dbe46bd:0x513385bc1dfa3b1c!8m2!3d38.9561274!4d20.7548227!16s%2Fg%2F11bz0w5qms?hl=en&entry=ttu"
+        >View larger Map</a
+      >
+    </button>
   </div>
   <div class="border flex justify-center pt-8 pb-8 text-gray-800">
     <div class="w-48 text-center">
