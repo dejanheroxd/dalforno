@@ -1,6 +1,7 @@
 ---
 import pizzaHeader from "../assets/pizza-heading.jpg";
 import { Image } from "astro:assets";
+import ResponsiveImage from "../components/ResponsiveImage.astro";
 ---
 
 <!-- ---
@@ -44,16 +45,20 @@ import { Image } from "astro:assets";
   </div>
 </main> -->
 <main>
-  <div class="flex flex-col items-center h-[540px] lg:flex-row lg:h-screen">
-    <div class="overflow-hidden h-64 lg:h-[100dvh] lg:w-3/6 lg:order-2">
-      <Image
-        src={pizzaHeader}
-        widths={[240, 540, 720, pizzaHeader.width]}
-        format="avif"
-        quality={"low"}
-        alt="pizza image "
-        class="lg:object-cover lg:h-full lg:w-full"
-      />
+  <div
+    class="flex flex-col items-center relative h-[540px] lg:flex-row lg:h-screen"
+  >
+    <div
+      class="overflow-hidden h-64 xl:pt-[170px] lg:h-[100dvh] lg:w-3/6 lg:order-2"
+    >
+      <div class="xl:scale-[1.57]">
+        <ResponsiveImage
+          src={pizzaHeader}
+          sizes={[400, 600, 1900]}
+          alt="Pizza image"
+          format="avif"
+        />
+      </div>
     </div>
     <div
       class="w-72 lg:w-3/6 h-full lg:justify-center flex flex-col items-center"
