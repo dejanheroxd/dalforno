@@ -1,39 +1,55 @@
 ---
-// import { Image } from "astro:assets";
+import { Image } from "astro:assets";
 import ContactUs from "./ContactUs.astro";
 import Form from "./Form.astro";
-// import dalfornoImg from "../../assets/dalfornoMapo.png";
-import Map from "./Map";
+import dalfornoImg from "../../assets/dalfornoMapo_auto_x2.jpg";
+import dalfornoImgDes from "../../assets/dalforno-map.png";
 ---
 
 <footer>
   <ContactUs />
   <Form />
-  <Map client:visible />
+  <div class="flex justify-center">
+    <div
+      class="relative flex justify-center flex-col overflow-hidden lg:h-[550px] lg:w-[1000px]"
+    >
+      <Image
+        loading="lazy"
+        height={3000}
+        width={1000}
+        format="avif"
+        quality={"high"}
+        src={dalfornoImg}
+        alt="map of dalforno"
+        class="block sm:hidden"
+      />
+      <Image
+        loading="lazy"
+        height={3000}
+        width={1000}
+        format="avif"
+        quality={"high"}
+        src={dalfornoImgDes}
+        alt="map of dalforno"
+        class="hidden sm:block"
+      />
+      <div class="group absolute top-6 right-6">
+        <button
+          class="h-10 w-40 bg-white sm:hover:bg-gray-100/80 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] duration-200"
+        >
+          <a
+            class="text-blue-600 sm:font-semibold sm:group-hover:text-blue-500 duration-200"
+            target="_blank"
+            href="https://www.google.com/maps/place/Dal+Forno+Pizzeria-Restaurant/@38.9564618,20.7544427,17z/data=!4m6!3m5!1s0x135c38fc8dbe46bd:0x513385bc1dfa3b1c!8m2!3d38.9561274!4d20.7548227!16s%2Fg%2F11bz0w5qms?hl=en&entry=ttu"
+            >View Larger Map</a
+          >
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="border flex justify-center pt-8 pb-8 text-gray-800">
     <div class="w-48 text-center">
       <p>© 2024 Dalforno. Powered by Astro and React</p>
     </div>
   </div>
 </footer>
-
-<!-- <div class="relative">
-  <Image
-    loading="lazy"
-    width={2000}
-    format="avif"
-    quality={"high"}
-    src={dalfornoImg}
-    alt="map of dalforno"
-  />
-  <button
-    class="absolute top-6 right-6 bg-white h-10 w-40 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
-  >
-    <a
-      class="text-blue-600"
-      target="_blank"
-      href="https://www.google.com/maps/place/Dal+Forno+Pizzeria-Restaurant/@38.9564618,20.7544427,17z/data=!4m6!3m5!1s0x135c38fc8dbe46bd:0x513385bc1dfa3b1c!8m2!3d38.9561274!4d20.7548227!16s%2Fg%2F11bz0w5qms?hl=en&entry=ttu"
-      >View Larger Map</a
-    >
-  </button>
-</div> -->
