@@ -58,7 +58,7 @@ export default function Navigation() {
   };
 
   useEffect(() => {
-    if (navActive) {
+    if (navActive && window.innerWidth < 600) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "visible";
@@ -69,8 +69,26 @@ export default function Navigation() {
     };
   }, [navActive]);
 
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 700) {
+        setNavActive(true);
+      } else {
+        setNavActive(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <header className="sticky bg-white top-0 left-0 z-50 h-16 flex sm:justify-center sm:px-4 list-none">
+    <header className="sticky bg-white top-0 left-0 z-50 h-16 sm:h-[65px] flex sm:justify-center sm:px-4 list-none">
       <li>
         <a
           href="/"
@@ -110,7 +128,8 @@ export default function Navigation() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="h-screen fixed top-0 z-40 origin-right w-screen flex flex-col justify-center items-center gap-y-8 text-3xl sm:flex bg-white  sm:items-center sm:gap-x-20"
+            className="h-screen fixed top-0 z-40 origin-right w-screen flex flex-col justify-center items-center gap-y-8 text-3xl sm:flex bg-white sm:items-center
+            sm:static sm:justify-start sm:text-italia lg:pl-32 sm:pl-24 sm:flex-row sm:gap-y-0 sm:text-base lg:gap-x-24 sm:gap-x-16 sm:h-full sm:w-full sm:z-10"
           >
             <div className="overflow-hidden">
               <motion.li
@@ -120,7 +139,7 @@ export default function Navigation() {
                 exit="initial"
                 onClick={() => toggleNavActive()}
               >
-                <a href="/">Home</a>
+                <a href="/">HOME</a>
               </motion.li>
             </div>
             <div className="overflow-hidden">
@@ -131,7 +150,7 @@ export default function Navigation() {
                 exit="initial"
                 onClick={() => toggleNavActive()}
               >
-                <a href="/about/">About</a>
+                <a href="/about/">ABOUT</a>
               </motion.li>
             </div>
             <div className="overflow-hidden">
@@ -142,7 +161,7 @@ export default function Navigation() {
                 exit="initial"
                 onClick={() => toggleNavActive()}
               >
-                <a href="/menu/">Menu</a>
+                <a href="/menu/">MENU</a>
               </motion.li>
             </div>
             <div className="overflow-hidden">
@@ -153,13 +172,13 @@ export default function Navigation() {
                 exit="initial"
                 onClick={() => toggleNavActive()}
               >
-                <a href="/contact/">Contact</a>
+                <a href="/contact/">CONTACT</a>
               </motion.li>
             </div>
           </motion.ul>
         )}
       </AnimatePresence>
-      <button className="hidden sm:block sm:absolute sm:text-white sm:bg-red-500 sm:h-full sm:w-32 sm:right-0">
+      <button className="hidden sm:block sm:absolute sm:text-white sm:bg-red-500 sm:h-full sm:w-32 sm:right-0 sm:z-20">
         Reserve
       </button>
     </header>
