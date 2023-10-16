@@ -1,10 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react"; // Import the React integration
 
-import react from "@astrojs/react";
-
-// https://astro.build/config
 export default defineConfig({
-  vite: { optimizeDeps: { include: ["leaflet"] } },
-  integrations: [tailwind(), react()],
+  integrations: [tailwind(), react()], // Add the React integration
 });
