@@ -43,6 +43,18 @@ export default function Navigation() {
     },
   };
 
+  const reserve = {
+    initial: {
+      opacity: 0,
+      y: -100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.2 },
+    },
+  };
+
   const btnVars1 = {
     animate: {
       rotate: navActive ? 45 : 0,
@@ -92,7 +104,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <header className="sticky bg-white top-0 left-0 z-50 h-16 sm:h-[65px] flex sm:justify-center sm:px-4 list-none">
+    <header className="sticky bg-white top-0 left-0 z-40 h-16 sm:h-[65px] flex sm:justify-center sm:px-4 list-none">
       <li>
         <a
           aria-label="HOME"
@@ -192,9 +204,14 @@ export default function Navigation() {
         )}
       </AnimatePresence>
       <a href="/contact" aria-label="contact">
-        <button className="hidden sm:block sm:absolute sm:text-white sm:bg-italia sm:h-12 top-2 sm:w-32 sm:right-3 sm:z-20 sm:hover:bg-red-700 sm:hover:text-white sm:duration-300">
+        <motion.button
+          variants={reserve}
+          initial="initial"
+          animate="animate"
+          className="hidden sm:block sm:absolute sm:text-white sm:bg-italia sm:h-12 top-2 sm:w-32 sm:right-3 sm:z-50 sm:hover:bg-red-700 sm:hover:text-white sm:duration-300"
+        >
           Reserve
-        </button>
+        </motion.button>
       </a>
     </header>
   );

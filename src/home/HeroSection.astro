@@ -4,7 +4,6 @@ import { Image } from "astro:assets";
 import insta from "../assets/insta.svg";
 import facebook from "../assets/facebook.svg";
 import twitter from "../assets/twitter.svg";
-import { motion } from "framer-motion";
 ---
 
 <div>
@@ -36,7 +35,7 @@ import { motion } from "framer-motion";
     </div>
   </div>
   <div
-    class="bg-white fixed top-0 bottom-0 right-0 w-[60px] lg:flex lg:justify-center lg:z-40 hidden"
+    class="bg-white fixed top-0 bottom-0 right-0 w-[60px] lg:flex lg:justify-center lg:z-30 hidden"
   >
     <div class="flex flex-col justify-center items-center gap-y-6">
       <p class="rotate-[90deg] font-bold text-2xl text-italia l">DALFORNO</p>
@@ -104,23 +103,6 @@ import { motion } from "framer-motion";
   </div>
 </div>
 
-<style>
-  /* Initial state */
-  .a {
-    transform: translateX(-100%);
-    opacity: 0;
-    transition:
-      transform 0.5s,
-      opacity 0.5s;
-  }
-
-  /* Final state */
-  .a-animate {
-    transform: translateX(0);
-    opacity: 1;
-  }
-</style>
-
 <script>
   // Get all the anchor links with the class 'a'
   const links = document.querySelectorAll(".a");
@@ -130,14 +112,6 @@ import { motion } from "framer-motion";
   const menuBtn = document.querySelector(".c");
   const pizza = document.querySelector(".pizza");
 
-  dalforno.style.transform = "translateX(-100%)";
-  dalforno.style.opacity = 0;
-  setTimeout(() => {
-    dalforno.style.transition = "transform 0.5s ease, opacity 0.5s ease";
-    dalforno.style.transform = "translateX(0)";
-    dalforno.style.opacity = 1;
-  }, 1500); // Delay each link animation
-
   rightDalforno.style.transform = "translateY(-100%)";
   rightDalforno.style.opacity = 0;
   rightDalforno.style.rotate = "90deg";
@@ -146,6 +120,14 @@ import { motion } from "framer-motion";
     rightDalforno.style.transform = "translateX(0)";
     rightDalforno.style.opacity = 1;
   }, 1000); // Delay each link animation
+
+  dalforno.style.transform = "translateX(-100%)";
+  dalforno.style.opacity = 0;
+  setTimeout(() => {
+    dalforno.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+    dalforno.style.transform = "translateX(0)";
+    dalforno.style.opacity = 1;
+  }, 1500); // Delay each link animation
 
   place.style.transform = "translateX(-100%)";
   place.style.opacity = 0;
@@ -181,5 +163,5 @@ import { motion } from "framer-motion";
     pizza.style.transition = "transform 0.5s ease, opacity 0.5s ease";
     pizza.style.transform = "translateY(0)";
     pizza.style.opacity = 1;
-  }, 1900); // Delay each link animation
+  }, 1300); // Delay each link animation
 </script>
