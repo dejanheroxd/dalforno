@@ -92,7 +92,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <header className="sticky bg-white top-0 left-0 z-50 h-16 sm:h-[65px] flex sm:justify-center sm:px-4 list-none">
+    <header className="shadow-[0_3px_10px_rgb(0,0,0,0.1)] sticky bg-white top-0 left-0 z-50 h-16 sm:h-[65px] flex sm:justify-center sm:px-4 list-none">
       <li>
         <a
           href="/"
