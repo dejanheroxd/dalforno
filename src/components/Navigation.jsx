@@ -137,14 +137,13 @@ export default function Navigation() {
           >
             <div className="overflow-hidden sm:hover:text-red-950 sm:duration-200 ">
               <motion.li
-                aria-label="HOME"
                 variants={navItem}
                 initial="initial"
                 animate="animate"
                 exit="initial"
                 onClick={() => toggleNavActive()}
               >
-                <a href="/" aria-label="HOME">
+                <a href="/" aria-label="/">
                   HOME
                 </a>
               </motion.li>
@@ -191,7 +190,7 @@ export default function Navigation() {
           </motion.ul>
         )}
       </AnimatePresence>
-      <a href="/contact">
+      <a href="/contact" aria-label="contact">
         <button className="hidden sm:block sm:absolute sm:text-white sm:bg-italia sm:h-full sm:w-32 sm:right-0 sm:z-20    sm:hover:bg-red-700 sm:hover:text-white sm:duration-300">
           Reserve
         </button>
