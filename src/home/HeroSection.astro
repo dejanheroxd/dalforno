@@ -3,7 +3,7 @@ import pizzaHeader from "../assets/pizza-heading.jpg";
 import { Image } from "astro:assets";
 ---
 
-<main>
+<div>
   <div
     class="flex flex-col items-center relative h-[540px] lg:flex-row lg:h-screen"
   >
@@ -43,11 +43,13 @@ import { Image } from "astro:assets";
       <h2 class="pb-14 text-stone-800 font-serif lg:pt-12 lg:text-xl">
         There is a Place like Home
       </h2>
-      <button
-        aria-label="see menu"
-        class="border border-italia text-italia px-4 text-lg lg:py-1 lg:px-5"
-        >See Menu</button
-      >
+      <a href="/menu">
+        <button
+          aria-label="see menu"
+          class="border border-italia text-italia px-4 text-lg lg:py-1 lg:px-5 sm:hover:bg-italia sm:hover:text-white sm:duration-300"
+          >See Menu</button
+        >
+      </a>
     </div>
   </div>
-</main>
+</div>

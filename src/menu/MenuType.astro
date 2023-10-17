@@ -3,13 +3,14 @@ import Food from "./Food.astro";
 ---
 
 <div class="flex flex-col justify-center items-center">
+  <div class="text-3xl font-serif text-italia pb-5 text-center">Antipasti</div>
+
+  <div class="text-center pb-12 xl:pb-20">
+    <span class="h-[1px] bg-black block w-9"></span>
+  </div>
   <div
-    class="flex flex-col items-center justify-center lg:grid w-full lg:grid-cols-2 xl:grid-cols-3"
+    class="flex flex-col items-center justify-center lg:grid lg:justify-center lg:items-center w-full lg:grid-cols-2 xl:grid-cols-3"
   >
-    <div class="text-3xl font-serif text-italia pb-5">Antipasti</div>
-    <div class="text-center pb-12">
-      <span class="h-[1px] bg-black block w-9"></span>
-    </div>
     <Food
       foodName="Focaccia"
       description="I’m a dish descriptionos. Click “Edit Menu” to open the Restaurant Menu editor and change my text."
@@ -24,6 +25,8 @@ import Food from "./Food.astro";
       foodName="Fried Zucchini"
       description="I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text."
       price="9"
+      show={true}
+      veg={true}
     />
     <Food
       foodName="Bruschetta di Pomodoro"
@@ -39,30 +42,38 @@ import Food from "./Food.astro";
       foodName="Insalata Mista"
       description="I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text."
       price="9"
+      show={true}
+      veg={true}
     />
     <Food
       foodName="Buffalo Mozzarella & Tomato"
       description="I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text."
       price="9"
+      center="true"
     />
+  </div>
+  <!------------------- Pasta ---------------------------------->
+
+  <div class="text-3xl font-serif text-italia pb-5">Pasta</div>
+  <div class="text-center pb-12 xl:pb-20">
+    <span class="h-[1px] bg-black block w-9"></span>
   </div>
   <div
     class="flex flex-col items-center justify-center lg:grid w-full lg:grid-cols-2 xl:grid-cols-3"
   >
-    <!------------------- Pasta ---------------------------------->
-    <div class="text-3xl font-serif text-italia pb-5">Pasta</div>
-    <div class="text-center pb-12">
-      <span class="h-[1px] bg-black block w-9"></span>
-    </div>
     <Food
       foodName="Pomodoro"
       description="I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text."
       price="9"
+      show={true}
+      veg={true}
     />
     <Food
       foodName="Penne Arrabiata"
       description="I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text."
       price="9"
+      show={true}
+      spicy={true}
     />
     <Food
       foodName="Gnocchi Quattro Formaggi"
@@ -88,20 +99,23 @@ import Food from "./Food.astro";
       foodName="Schoko"
       description="I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text."
       price="9"
+      center="true"
     />
+  </div>
+  <!------------------- Pizza ---------------------------------->
+  <div class="text-3xl font-serif text-italia pb-5">Pizza</div>
+  <div class="text-center pb-12 xl:pb-20">
+    <span class="h-[1px] bg-black block w-9"></span>
   </div>
   <div
     class="flex flex-col items-center justify-center lg:grid w-full lg:grid-cols-2 xl:grid-cols-3"
   >
-    <!------------------- Pizza ---------------------------------->
-    <div class="text-3xl font-serif text-italia pb-5">Pizza</div>
-    <div class="text-center pb-12">
-      <span class="h-[1px] bg-black block w-9"></span>
-    </div>
     <Food
       foodName="Margherita"
       description="I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text."
       price="9"
+      show={true}
+      veg={true}
     />
     <Food
       foodName="Arugula"
@@ -127,16 +141,18 @@ import Food from "./Food.astro";
       foodName="Siciliana"
       description="I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text."
       price="9"
+      show={true}
+      spicy={true}
     />
+  </div>
+  <!------------------- Dolci ---------------------------------->
+  <div class="text-3xl font-serif text-italia pb-5">Dolci</div>
+  <div class="text-center pb-12">
+    <span class="h-[1px] bg-black block w-9"></span>
   </div>
   <div
     class="flex flex-col items-center justify-center lg:grid w-full lg:grid-cols-2 xl:grid-cols-3"
   >
-    <!------------------- Pizza ---------------------------------->
-    <div class="text-3xl font-serif text-italia pb-5">Dolci</div>
-    <div class="text-center pb-12">
-      <span class="h-[1px] bg-black block w-9"></span>
-    </div>
     <Food
       foodName="Ice Cream"
       description="I’m a dish description. Click “Edit Menu” to open the Restaurant Menu editor and change my text."

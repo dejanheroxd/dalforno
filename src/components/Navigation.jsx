@@ -135,7 +135,7 @@ export default function Navigation() {
             className="h-screen fixed top-0 z-40 origin-right w-screen flex flex-col justify-center items-center gap-y-8 text-3xl sm:flex bg-white sm:items-center
             sm:static sm:justify-start sm:text-italia lg:pl-32 sm:pl-24 sm:flex-row sm:gap-y-0 sm:text-base lg:gap-x-24 sm:gap-x-16 sm:h-full sm:w-full sm:z-10"
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden sm:hover:text-red-950 sm:duration-200 ">
               <motion.li
                 variants={navItem}
                 initial="initial"
@@ -146,7 +146,7 @@ export default function Navigation() {
                 <a href="/">HOME</a>
               </motion.li>
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden sm:hover:text-red-950 sm:duration-200">
               <motion.li
                 variants={navItem}
                 initial="initial"
@@ -157,7 +157,7 @@ export default function Navigation() {
                 <a href="/about/">ABOUT</a>
               </motion.li>
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden sm:hover:text-red-950 sm:duration-200">
               <motion.li
                 variants={navItem}
                 initial="initial"
@@ -168,7 +168,7 @@ export default function Navigation() {
                 <a href="/menu/">MENU</a>
               </motion.li>
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden sm:hover:text-red-950 sm:duration-200">
               <motion.li
                 variants={navItem}
                 initial="initial"
@@ -182,9 +182,11 @@ export default function Navigation() {
           </motion.ul>
         )}
       </AnimatePresence>
-      <button className="hidden sm:block sm:absolute sm:text-white sm:bg-red-500 sm:h-full sm:w-32 sm:right-0 sm:z-20">
-        Reserve
-      </button>
+      <a href="/contact">
+        <button className="hidden sm:block sm:absolute sm:text-white sm:bg-italia sm:h-full sm:w-32 sm:right-0 sm:z-20    sm:hover:bg-red-700 sm:hover:text-white sm:duration-300">
+          Reserve
+        </button>
+      </a>
     </header>
   );
 }

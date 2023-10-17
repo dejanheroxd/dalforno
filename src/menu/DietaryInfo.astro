@@ -1,0 +1,11 @@
+---
+const { show, veg, spicy } = Astro.props;
+---
+
+<p
+  class={`${veg ? "bg-lime-600" : "" || spicy ? "bg-red-600" : ""} ${
+    show ? "block" : "hidden"
+  } px-3 text-white text-sm`}
+>
+  {`${veg ? "VEGETARIAN" : "" || spicy ? "SPICY" : ""}`}
+</p>
