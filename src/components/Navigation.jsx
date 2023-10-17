@@ -137,13 +137,16 @@ export default function Navigation() {
           >
             <div className="overflow-hidden sm:hover:text-red-950 sm:duration-200 ">
               <motion.li
+                aria-label="HOME"
                 variants={navItem}
                 initial="initial"
                 animate="animate"
                 exit="initial"
                 onClick={() => toggleNavActive()}
               >
-                <a href="/">HOME</a>
+                <a href="/" aria-label="HOME">
+                  HOME
+                </a>
               </motion.li>
             </div>
             <div className="overflow-hidden sm:hover:text-red-950 sm:duration-200">
@@ -154,7 +157,9 @@ export default function Navigation() {
                 exit="initial"
                 onClick={() => toggleNavActive()}
               >
-                <a href="/about/">ABOUT</a>
+                <a href="/about/" aria-label="ABOUT">
+                  ABOUT
+                </a>
               </motion.li>
             </div>
             <div className="overflow-hidden sm:hover:text-red-950 sm:duration-200">
@@ -165,7 +170,9 @@ export default function Navigation() {
                 exit="initial"
                 onClick={() => toggleNavActive()}
               >
-                <a href="/menu/">MENU</a>
+                <a href="/menu/" aria-label="MENU">
+                  MENU
+                </a>
               </motion.li>
             </div>
             <div className="overflow-hidden sm:hover:text-red-950 sm:duration-200">
@@ -176,7 +183,9 @@ export default function Navigation() {
                 exit="initial"
                 onClick={() => toggleNavActive()}
               >
-                <a href="/contact/">CONTACT</a>
+                <a href="/contact/" aria-label="CONTACT">
+                  CONTACT
+                </a>
               </motion.li>
             </div>
           </motion.ul>
