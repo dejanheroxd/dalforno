@@ -92,7 +92,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <header className="shadow-[0_3px_10px_rgb(0,0,0,0.1)] sticky bg-white top-0 left-0 z-50 h-16 sm:h-[65px] flex sm:justify-center sm:px-4 list-none">
+    <header className="sticky bg-white top-0 left-0 z-50 h-16 sm:h-[65px] flex sm:justify-center sm:px-4 list-none">
       <li>
         <a
           aria-label="HOME"
@@ -192,7 +192,7 @@ export default function Navigation() {
         )}
       </AnimatePresence>
       <a href="/contact" aria-label="contact">
-        <button className="hidden sm:block sm:absolute sm:text-white sm:bg-italia sm:h-full sm:w-32 sm:right-0 sm:z-20    sm:hover:bg-red-700 sm:hover:text-white sm:duration-300">
+        <button className="hidden sm:block sm:absolute sm:text-white sm:bg-italia sm:h-12 top-2 sm:w-32 sm:right-3 sm:z-20 sm:hover:bg-red-700 sm:hover:text-white sm:duration-300">
           Reserve
         </button>
       </a>

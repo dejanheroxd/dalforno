@@ -1,16 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import MenuType from "../menu/MenuType.astro";
+import insta from "../assets/insta.svg";
+import facebook from "../assets/facebook.svg";
+import twitter from "../assets/twitter.svg";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Menu">
-  <div class="flex flex-col items-center">
-    <p
-      class="text-2xl sm:mt-20 xl:text-3xl text-italia font-serif pb-2 xl:pb-4"
-    >
-      Menu
-    </p>
-    <p class="text-lg text-orange-950 pb-7 xl:pb-14">Our Classic Food</p>
+  <div
+    class="bg-italia fixed left-0 top-0 bottom-0 w-[60px] lg:flex lg:justify-center lg:z-40 hidden"
+  >
+    <div class="flex flex-col justify-center items-center gap-y-6">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        class="hover:cursor-pointer"
+      >
+        <Image src={insta} alt="in" class="h-6 w-10" />
+      </a>
+      <a href="https://www.facebook.com/" target="_blank">
+        <Image src={facebook} alt="ad" class="h-6 w-10 hover:cursor-pointer" />
+      </a>
+      <a href="https://twitter.com/">
+        <Image src={twitter} alt="dd" class="h-6 w-10 hover:cursor-pointer" />
+      </a>
+    </div>
   </div>
-  <MenuType />
+  <div
+    class="fixed top-0 bottom-0 right-0 w-[60px] lg:flex lg:justify-center lg:z-40 hidden bg-italia"
+  >
+    <div class="flex flex-col justify-center items-center gap-y-6">
+      <p class="rotate-[90deg] font-bold text-2xl text-white">DALFORNO</p>
+    </div>
+  </div>
+  <div class="sm:px-10 sm:py-10 bg-italia xl:block">
+    <div class="flex flex-col items-center bg-white">
+      <p
+        class="text-2xl sm:mt-20 xl:text-3xl text-italia font-serif pb-2 xl:pb-4"
+      >
+        Menu
+      </p>
+      <p class="text-lg text-orange-950 pb-7 xl:pb-14">Our Classic Food</p>
+      <MenuType />
+    </div>
+  </div>
 </Layout>

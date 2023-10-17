@@ -1,5 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import insta from "../assets/insta.svg";
+import facebook from "../assets/facebook.svg";
+import twitter from "../assets/twitter.svg";
+import { Image } from "astro:assets";
 ---
 
-<Layout title="Contact" />
+<Layout title="Contact">
+  <div
+    class="bg-white fixed left-0 top-0 bottom-0 w-[60px] lg:flex lg:justify-center lg:z-40 hidden"
+  >
+    <div class="flex flex-col justify-center items-center gap-y-6">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        class="hover:cursor-pointer"
+      >
+        <Image src={insta} alt="in" class="h-6 w-10" />
+      </a>
+      <a href="https://www.facebook.com/" target="_blank">
+        <Image src={facebook} alt="ad" class="h-6 w-10 hover:cursor-pointer" />
+      </a>
+      <a href="https://twitter.com/">
+        <Image src={twitter} alt="dd" class="h-6 w-10 hover:cursor-pointer" />
+      </a>
+    </div>
+  </div>
+  <div
+    class="bg-white fixed top-0 bottom-0 right-0 w-[60px] lg:flex lg:justify-center lg:z-40 hidden"
+  >
+    <div class="flex flex-col justify-center items-center gap-y-6">
+      <p class="rotate-[90deg] font-bold text-2xl text-italia">DALFORNO</p>
+    </div>
+  </div>
+</Layout>
