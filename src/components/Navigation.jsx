@@ -8,7 +8,7 @@ export default function Navigation() {
     if (window.innerHeight < 600) {
       setNavActive((prev) => !prev);
     } else {
-      setNavActive(true);
+      setNavActive((prev) => !prev);
     }
   }
 
