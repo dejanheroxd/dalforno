@@ -6,6 +6,9 @@ export default {
       colors: {
         italia: "#DC3727",
       },
+      backgroundPosition: {
+        rightTwen: "70px ",
+      },
     },
   },
   plugins: [],

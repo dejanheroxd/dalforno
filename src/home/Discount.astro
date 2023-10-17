@@ -3,24 +3,44 @@ import specialPizza from "../assets/special-pizza.jpg";
 import { Image } from "astro:assets";
 ---
 
-<main class="flex h-[530px] bg-italia mt-20">
-  <div class="flex flex-col items-center">
-    <p class="pb-10 pt-10 text-white font-bold text-2xl font-serif">
-      Special Offer
-    </p>
-    <div>
-      <Image
-        src={specialPizza}
-        width={700}
-        quality={48}
-        format="avif"
-        alt="special offer pizza"
-      />
+<main
+  class="flex justify-center 2xl:justify-start 2xl:pl-44 h-[530px] min-[500px]:h-[600px] min-[600px]:h-[700px] 2xl:h-[600px] bg-italia mt-20"
+>
+  <div class="flex flex-col 2xl:flex-row items-center">
+    <div class="2xl:pr-24 2xl:pl-24">
+      <p
+        class="pb-10 pt-10 2xl:pt-0 text-center text-white font-bold text-2xl xl:text-3xl font-serif"
+      >
+        Special Offer
+      </p>
+      <div>
+        <Image
+          src={specialPizza}
+          width={700}
+          quality={48}
+          format="avif"
+          alt="special offer pizza"
+        />
+      </div>
     </div>
-    <p class="text-white font-bold font-serif pt-6 pb-2">
-      Mediterranean Magic Pizza
-    </p>
-    <p class="text-white font-bold font-serif text-2xl pb-3">Only 11.99</p>
-    <button class="px-3 border border-white text-white">See All</button>
+    <div class="flex flex-col items-center">
+      <p
+        class="text-white font-bold font-serif pt-6 pb-2 2xl:pb-0 xl:text-lg 2xl:text-2xl 2xl:pt-20"
+      >
+        Mediterranean Magic Pizza
+      </p>
+      <div
+        class="2xl:flex text-center 2xl:justify-center 2xl:items-center 2xl:pt-6 2xl:gap-x-5"
+      >
+        <p
+          class="text-white font-bold font-serif text-2xl xl:text-3xl pb-3 xl:pb-5 2xl:pb-5 2xl:pt-3"
+        >
+          Only 11.99
+        </p>
+        <button class="px-3 xl:px-4 xl:py-1 border border-white text-white"
+          >See All</button
+        >
+      </div>
+    </div>
   </div>
 </main>

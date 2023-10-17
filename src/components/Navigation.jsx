@@ -5,7 +5,11 @@ export default function Navigation() {
   const [navActive, setNavActive] = useState(false);
 
   function toggleNavActive() {
-    setNavActive((prev) => !prev);
+    if (window.innerHeight < 600) {
+      setNavActive((prev) => !prev);
+    } else {
+      setNavActive(true);
+    }
   }
 
   const navVars = {

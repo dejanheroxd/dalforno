@@ -1,24 +1,31 @@
 ---
 import pizzaHeader from "../assets/pizza-heading.jpg";
 import { Image } from "astro:assets";
-import ResponsiveImage from "../components/ResponsiveImage.astro";
----
-
-<!-- ---
-import pizzaHeader from "../assets/pizza-heading.jpg";
-import { Image } from "astro:assets";
 ---
 
 <main>
-  <div class="flex flex-col items-center h-[540px] lg:flex-row lg:h-screen">
-    <div class="overflow-hidden h-64 lg:h-[100dvh] lg:w-3/6 lg:order-2">
+  <div
+    class="flex flex-col items-center relative h-[540px] lg:flex-row lg:h-screen"
+  >
+    <div
+      class="overflow-hidden lg:hidden h-64 xl:pt-[170px] lg:h-[100dvh] lg:w-3/6 lg:order-2"
+    >
       <Image
-        src={pizzaHeader}
-        height={450}
+        width={1020}
         format="avif"
-        quality={"high"}
-        alt="pizza image "
-        class="lg:object-cover lg:h-full lg:w-full"
+        src={pizzaHeader}
+        alt="Image of pizza"
+      />
+    </div>
+    <div
+      class="overflow-hidden hidden lg:block h-64 lg:h-[100dvh] lg:w-3/6 lg:order-2"
+    >
+      <Image
+        width={1500}
+        src={pizzaHeader}
+        format="avif"
+        alt="Image of pizza"
+        class="h-full w-full object-cover z-0"
       />
     </div>
     <div
@@ -28,46 +35,7 @@ import { Image } from "astro:assets";
         class="relative flex flex-col justify-center items-center bg-[url('/src/assets/olives.webp')] lg:bg-[url('/src/assets/olive-big.webp')] bg-no-repeat bg-center lg:h-72 lg:mb-5"
       >
         <h1
-          class="pb-[85px] mt-14 lg:pb-[30px] z-20 pt-4 font-bold text-5xl lg:text-8xl text-italia"
-        >
-          DALFORNO
-        </h1>
-      </div>
-      <h2 class="pb-14 text-stone-800 font-serif lg:pt-12 lg:text-xl">
-        There is a Place like Home
-      </h2>
-      <button
-        aria-label="see menu"
-        class="border border-italia text-italia px-4 text-lg lg:py-1 lg:px-5"
-        >See Menu</button
-      >
-    </div>
-  </div>
-</main> -->
-<main>
-  <div
-    class="flex flex-col items-center relative h-[540px] lg:flex-row lg:h-screen"
-  >
-    <div
-      class="overflow-hidden h-64 xl:pt-[170px] lg:h-[100dvh] lg:w-3/6 lg:order-2"
-    >
-      <div class="xl:scale-[1.57]">
-        <ResponsiveImage
-          src={pizzaHeader}
-          sizes={[400, 600, 1900]}
-          alt="Pizza image"
-          format="avif"
-        />
-      </div>
-    </div>
-    <div
-      class="w-72 lg:w-3/6 h-full lg:justify-center flex flex-col items-center"
-    >
-      <div
-        class="relative flex flex-col justify-center items-center bg-[url('/src/assets/olives.webp')] lg:bg-[url('/src/assets/olive-big.webp')] bg-no-repeat bg-center lg:h-72 lg:mb-5"
-      >
-        <h1
-          class="pb-[85px] mt-14 lg:pb-[30px] z-20 pt-4 font-bold text-5xl lg:text-8xl text-italia"
+          class="pb-[85px] mt-14 lg:pb-[30px] z-20 pt-4 font-bold text-5xl lg:text-6xl xl:text-8xl text-italia"
         >
           DALFORNO
         </h1>
