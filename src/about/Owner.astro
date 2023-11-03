@@ -4,6 +4,8 @@ import chef from "../assets/chef.jpg";
 import insta from "../assets/insta.svg";
 import facebook from "../assets/facebook.svg";
 import twitter from "../assets/twitter.svg";
+import OwnerIntro from "./OwnerIntro";
+import OwnerText from "./OwnerText";
 ---
 
 <div
@@ -35,12 +37,7 @@ import twitter from "../assets/twitter.svg";
       <p class="rotate-[90deg] font-bold text-2xl text-italia">DALFORNO</p>
     </div>
   </div>
-  <div class="mb-28">
-    <p class="text-italia text-2xl lg:text-3xl lg:pb-2">
-      Owner & Executive Chef
-    </p>
-    <p class="text-xl">Alberto Paganini</p>
-  </div>
+  <OwnerIntro client:visible />
   <div
     class="bg-italia relative w-full h-[390px] xl:h-[440px] flex justify-center"
   >
@@ -56,13 +53,7 @@ import twitter from "../assets/twitter.svg";
       />
     </div>
   </div>
-  <p class="pt-8 text-xl italic pb-10">"Al Dente makes you smile"</p>
-  <p class="w-80 lg:w-[440px] lg:text-lg">
-    I'm a paragraph. Click here to add your own text and edit me. It’s easy.
-    Just click “Edit Text” or double click me to add your own content and make
-    changes to the font. I’m a great place for you to tell a story and let your
-    users know a little more about you.
-  </p>
+  <OwnerText client:visible />
   <div class="flex justify-center pt-9 pb-5">
     <span class="h-[1px] w-9 block bg-italia"></span>
   </div>
