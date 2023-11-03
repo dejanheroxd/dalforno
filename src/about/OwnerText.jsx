@@ -12,7 +12,7 @@ export default function OwnerText() {
           transition: { duration: 0.8, delay: 0.2 },
         }}
         viewport={{ once: true }}
-        class="pt-8 text-xl italic pb-10"
+        className="pt-8 text-xl italic pb-10"
       >
         "Al Dente makes you smile"
       </motion.p>
@@ -24,7 +24,7 @@ export default function OwnerText() {
           transition: { duration: 0.8, delay: 0.2 },
         }}
         viewport={{ once: true }}
-        class="w-80 lg:w-[440px] lg:text-lg"
+        className="w-80 lg:w-[440px] lg:text-lg"
       >
         I'm a paragraph. Click here to add your own text and edit me. It’s easy.
         Just click “Edit Text” or double click me to add your own content and

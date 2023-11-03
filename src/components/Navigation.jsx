@@ -109,8 +109,10 @@ export default function Navigation() {
         <a
           aria-label="HOME"
           href="/"
-          className="absolute left-4 font-semibold text-lg top-[14px]"
-        ></a>
+          className="absolute text-black text-3xl left-4 font-semibold top-[12px]"
+        >
+          D
+        </a>
       </li>
       <button
         aria-label="navigation button"

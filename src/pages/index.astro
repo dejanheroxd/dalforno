@@ -1,14 +1,14 @@
 ---
-import Discount from "../home/Discount.astro";
 import HeroSection from "../home/HeroSection.astro";
 import InspirationSection from "../home/InspirationSection.astro";
 import OpeningHours from "../home/OpeningHours.astro";
 import Layout from "../layouts/Layout.astro";
+import HorizontalScroll from "../home/HorizontalScroll";
 ---
 
 <Layout title="Home">
   <HeroSection />
   <InspirationSection />
   <OpeningHours />
-  <Discount />
+  <HorizontalScroll client:visible />
 </Layout>
