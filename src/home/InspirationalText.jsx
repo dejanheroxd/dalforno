@@ -14,7 +14,7 @@ export default function InspirationalText() {
         whileInView={{
           opacity: 1,
           x: 0,
-          transition: { duration: 0.8, delay: 0.2 },
+          transition: { duration: 0.8, delay: 0.201 },
         }}
         viewport={{ once: true }}
         class="text-italia hidden lg:block font-serif py-16 text-lg lg:text-3xl"
