@@ -9,7 +9,7 @@ export default function OwnerIntro() {
         whileInView={{
           opacity: 1,
           x: 0,
-          transition: { duration: 0.8, delay: 0.2 },
+          transition: { duration: 0.8, delay: 0.2232 },
         }}
         viewport={{ once: true }}
         className="text-italia text-2xl lg:text-3xl lg:pb-2"
