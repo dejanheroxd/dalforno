@@ -14,7 +14,7 @@ export default function OwnerIntro() {
         viewport={{ once: true }}
         className="text-italia text-2xl lg:text-3xl lg:pb-2"
       >
-        Owner & Executive Chef
+        Ιδιοκτήτης & Εκτελεστικός Σεφ
       </motion.p>
       <motion.p
         initial={{ opacity: 0, x: 100 }}

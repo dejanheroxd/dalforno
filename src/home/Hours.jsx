@@ -16,7 +16,7 @@ export default function Hours() {
             viewport={{ once: true }}
             class="l pb-10 2xl:pb-16 text-italia"
           >
-            Opening Hours
+            Ώρες Λειτουργίας
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: 100 }}
@@ -28,7 +28,7 @@ export default function Hours() {
             viewport={{ once: true }}
             class="l pb-1 2xl:pb-4 text-stone-800"
           >
-            Mon - Fri: 12pm - 10pm
+            Δευ - Παρ: 5μμ - 12πμ
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: 100 }}
@@ -40,7 +40,7 @@ export default function Hours() {
             viewport={{ once: true }}
             class="l pb-1 2xl:pb-4 text-stone-800"
           >
-            Saturday: 11am - 10pm
+            Σάββατο: 5μμ - 12πμ
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: 100 }}
@@ -52,7 +52,7 @@ export default function Hours() {
             viewport={{ once: true }}
             class="l pb-1 2xl:pb-4 text-stone-800"
           >
-            Sunday: 11am - 11pm
+            Κυριακή: 5μμ - 12πμ
           </motion.p>
         </div>
       </div>

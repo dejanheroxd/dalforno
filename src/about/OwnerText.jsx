@@ -14,7 +14,7 @@ export default function OwnerText() {
         viewport={{ once: true }}
         className="pt-8 text-xl italic pb-10"
       >
-        "Al Dente makes you smile"
+        "Το Al Dente σε κάνει να χαμογελάς"
       </motion.p>
       <motion.p
         initial={{ opacity: 0, x: 100 }}
@@ -26,10 +26,10 @@ export default function OwnerText() {
         viewport={{ once: true }}
         className="w-80 lg:w-[440px] lg:text-lg"
       >
-        I'm a paragraph. Click here to add your own text and edit me. It’s easy.
-        Just click “Edit Text” or double click me to add your own content and
-        make changes to the font. I’m a great place for you to tell a story and
-        let your users know a little more about you.
+        Η δημιουργία πίτσας είναι μια τέχνη. Κάθε συστατικό συνδυάζεται
+        αρμονικά, δημιουργώντας ένα συναίσθημα γεύσης. Δεν είναι απλά φαγητό,
+        είναι μια εμπειρία. Κάθε κομμάτι λέει μια ιστορία, ανάβοντας τις
+        αισθήσεις με ευχαρίστηση. Έλα μαζί μου σε αυτό το γαστρονομικό ταξίδι.
       </motion.p>
     </div>
   );

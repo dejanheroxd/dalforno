@@ -159,7 +159,7 @@ export default function Navigation() {
                 onClick={() => toggleNavActive()}
               >
                 <a href="/" aria-label="HOME">
-                  HOME
+                  ΑΡΧΙΚΗ
                 </a>
               </motion.li>
             </div>
@@ -172,7 +172,7 @@ export default function Navigation() {
                 onClick={() => toggleNavActive()}
               >
                 <a href="/about/" aria-label="ABOUT">
-                  ABOUT
+                  ΛΙΓΑ ΓΙΑ ΕΜΑΣ
                 </a>
               </motion.li>
             </div>
@@ -185,7 +185,7 @@ export default function Navigation() {
                 onClick={() => toggleNavActive()}
               >
                 <a href="/menu/" aria-label="MENU">
-                  MENU
+                  ΜΕΝΟΥ
                 </a>
               </motion.li>
             </div>
@@ -198,7 +198,7 @@ export default function Navigation() {
                 onClick={() => toggleNavActive()}
               >
                 <a href="/contact/" aria-label="CONTACT">
-                  CONTACT
+                  ΕΠΙΚΟΙΝΩΝΙΑ
                 </a>
               </motion.li>
             </div>
@@ -212,7 +212,7 @@ export default function Navigation() {
           animate="animate"
           className="hidden sm:block sm:absolute sm:text-white sm:bg-italia sm:h-12 top-2 sm:w-32 sm:right-3 sm:z-50 sm:hover:bg-red-700 sm:hover:text-white sm:duration-300"
         >
-          Reserve
+          Κράτηση
         </motion.button>
       </a>
     </header>

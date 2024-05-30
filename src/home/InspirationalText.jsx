@@ -19,8 +19,8 @@ export default function InspirationalText() {
         viewport={{ once: true }}
         class="text-italia hidden lg:block font-serif py-16 text-lg lg:text-3xl"
       >
-        <p class="pb-[7px]">Authentic Italian Flavors,</p>
-        <p>Generations in the Making</p>
+        <p class="pb-[7px]">Αυθεντικές Ιταλικές Γεύσεις,</p>
+        <p>Δημιουργημένες με Πάθος</p>
       </motion.div>
       <motion.p
         initial={{ opacity: 0, x: 100 }}
@@ -32,10 +32,11 @@ export default function InspirationalText() {
         viewport={{ once: true }}
         class="text-stone-800 font-serif lg:text-lg lg:leading-9 lg:pb-6"
       >
-        Welcome to our Italian pizzeria, where we bring the flavors of Italy to
-        your plate. Our passion for authentic Italian taste spans generations.
-        Each dish is a labor of love, crafted with the finest ingredients. Join
-        us on our culinary journey. Buon appetito!
+        Καλώς ήρθατε στην ιταλική μας πιτσαρία, όπου φέρνουμε τις γεύσεις της
+        Ιταλίας στο πιάτο σας. Η αγάπη μας για την αυθεντική ιταλική γεύση
+        φαίνεται σε κάθε πιάτο. Κάθε γεύμα είναι μια εργασία αγάπης,
+        δημιουργημένη με τα καλύτερα υλικά. Ελάτε να μας συνοδεύσετε σε αυτό το
+        γαστρονομικό ταξίδι. Buon appetito!
       </motion.p>
       <motion.div
         initial={{ opacity: 0, x: 100 }}
@@ -48,7 +49,7 @@ export default function InspirationalText() {
       >
         <a href="/about" aria-label="More Info About Us">
           <button class="px-12 lg:px-6 py-3 lg:py-[6px] border border-gray-700 text-sm sm:text-base font-semibold text-gray-700 my-8 sm:hover:text-italia sm:duration-300">
-            More Info About Us
+            Περισσότερα
           </button>
         </a>
       </motion.div>
